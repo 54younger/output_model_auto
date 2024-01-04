@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     args=parse_args()
     parent_dir = args.parent_dir
-    blender_file = os.path.join(parent_dir, "model.blend")
+    blender_file = os.path.join(parent_dir, "new.blend")
     temp_file = os.path.join(parent_dir, "temp.blend")
     temp_file1= os.path.join(parent_dir, "temp.blend1")
     pic_path = os.path.join(parent_dir, "img", "resize", args.pic_name + "_resize.jpg")
@@ -22,11 +22,14 @@ if __name__ == "__main__":
 
     bpy.ops.wm.open_mainfile(filepath=blender_file)
     bpy.ops.wm.save_as_mainfile(filepath=temp_file)
+    try:
+      obj = bpy.data.objects["pointer"]
+      obj.select_set(True)
+      obj.rotation_mode = 'QUATERNION'
+      bpy.ops.object.select_all(action='DESELECT')
+    except:
+        pass
 
-    obj = bpy.data.objects["pointer"]
-    obj.select_set(True)
-    obj.rotation_mode = 'QUATERNION'
-    bpy.ops.object.select_all(action='DESELECT')
 
     obj = bpy.data.objects["plain"]
     obj.select_set(True)
