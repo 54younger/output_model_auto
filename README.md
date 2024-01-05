@@ -17,7 +17,7 @@
   #### 运行blender.py命令为:
   你的blender安装路径(不要有空格)(这个应该不用强调吧)/blender.exe -b -P *该文件夹绝对路径*/blender.py -- --parent_dir *该文件夹绝对路径* --pic_name 专辑封面名(只有名字,无需要加后缀)
 
-*example*: blender.exe -b -P C:/Users/younger/Desktop/output_model_auto_new/blender.py -- --parent_dir C:/Users/younger/Desktop/output_model_auto_new --pic_name 2
+*example*: blender.exe -b -P C:/Users/younger/Desktop/output_model_auto_oldPlayer/blender.py -- --parent_dir C:/Users/younger/Desktop/output_model_auto_oldPlayer --pic_name 2
 
 ## 3
 得到目标文件
